@@ -1,4 +1,5 @@
 **This project is implementation of the Bitespeed Identity Reconciliation assignment.**
+
 The goal is to identify and link customer contacts based on email and phone number and return a consolidated identity.
 
 What This Service Does
