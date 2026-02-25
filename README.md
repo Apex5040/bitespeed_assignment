@@ -1,5 +1,4 @@
-**This project is implementation of the Bitespeed Identity Reconciliation assignment.
-**
+**This project is implementation of the Bitespeed Identity Reconciliation assignment.**
 The goal is to identify and link customer contacts based on email and phone number and return a consolidated identity.
 
 What This Service Does
@@ -16,8 +15,7 @@ If a request connects two primary contacts → the older one remains primary and
 
 Returns all emails, phone numbers, and secondary contact IDs linked to the primary.
 
-**Tech Stack Used
-**
+**Tech Stack Used**
 Node.js
 
 TypeScript
@@ -28,10 +26,8 @@ PostgreSQL
 
 Prisma ORM
 
-**API Endpoint
-**
-**POST /identify
-**
+**API Endpoint**
+**POST /identify**
 Request Body (JSON)
 {
   "email": "example@gmail.com",
@@ -40,8 +36,7 @@ Request Body (JSON)
 
 Either email or phoneNumber must be provided.
 
-**Response Format
-**{
+**Response Format**{
   "contact": {
     "primaryContatctId": 1,
     "emails": ["example@gmail.com"],
@@ -49,35 +44,27 @@ Either email or phoneNumber must be provided.
     "secondaryContactIds": []
   }
 }
-**Running Locally
-**
-**Install dependencies
-**
+**Running Locally**
+**Install dependencies**
 npm install
 
-**Add .env file
-**
+**Add .env file**
 DATABASE_URL="your_postgres_connection_string"
 PORT=3000
 
-**Run migrations
-**
+**Run migrations**
 npx prisma migrate dev
 
-**Start server
-**
+**Start server**
 npm run dev
 
 Server runs on http://localhost:3000
 
-**Deployment
-**
+**Deployment**
 The app is deployed on Render.
 
-**Build command:
-**
+**Build command:**
 npm install && npx prisma migrate deploy && npm run build
 
-**Start command:
-**
+**Start command:**
 npm start
